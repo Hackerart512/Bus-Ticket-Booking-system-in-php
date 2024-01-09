@@ -1,0 +1,47 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    color: black;
+}
+
+
+
+
+.home-section {
+    height: 90vh;
+
+    background: #0037ff3b;
+}
+
+h2 {
+    font-family: emoji;
+    font-size: 10vh;
+}
+
+h3 {
+    font-family: fantasy;
+}
+
+h4 {
+    font-family: fangsong;
+    font-size: 37px;
+}
+
+.mid-pera {
+    width: 88%;
+}
+
+.footer-section {
+    background: #5926dfba;
+}
+
+
+.btn-primary {
+    background-color:#5926df8f;
+    border: none;
+}
+
+
+.btn:hover{
+    background-color:  #7385e6;
+}
