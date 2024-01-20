@@ -91,9 +91,9 @@
                     </ul>
 
                     <!-- Sheduling -->
-                    <a href="#sheduling" class="list-group-item list-group-item-action py-2 ripple" data-toggle="collapse" aria-expanded="false">
+                    <a href="sheduling.php" class="list-group-item list-group-item-action py-2 ripple"  >
                        <i class="fas fa-chart-bar fa-fw me-3"></i>
-                        Sheduling
+                       Scheduling 
                     </a>
                 </div>
             </div>

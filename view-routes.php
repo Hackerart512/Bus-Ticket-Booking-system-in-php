@@ -1,4 +1,4 @@
-<!--                      VIEW BUS                      -->
+<!--                      VIEW ROUTES WITH AND WITHOUT ID                     -->
 
 <?php
 
@@ -9,17 +9,40 @@ if(!isset($_SESSION['username']) || $_SESSION['loggedin'] != true){
 }
 // check session
 
+
 include("./database.php");
 
-if (mysqli_connect_errno()) {
-    echo mysqli_connect_error();
-    exit();
-} else {
-    $selectQuery = "SELECT * FROM `routes`;";
-    $result = mysqli_query($conn, $selectQuery);
-    if (mysqli_num_rows($result) > 0) {
+if(!$_GET["Id"] ==""){
+
+    // When redirect bud Id by sheduling page
+
+    if (mysqli_connect_errno()) {
+        echo mysqli_connect_error();
+        exit();
     } else {
-        $msg = "No Record found";
+        $rowid = $_GET['Id'];
+    
+        $selectQuery = "SELECT * FROM `routes` WHERE `Bus_id` = '$rowid';";
+        $result = mysqli_query($conn, $selectQuery);
+        if (mysqli_num_rows($result) > 0) {
+        } else {
+            $msg = "No Record found";
+        }
+    }
+}else{
+    // When direct open view routes page
+
+    if (mysqli_connect_errno()) {
+        echo mysqli_connect_error();
+        exit();
+    } else {
+    
+        $selectQuery = "SELECT * FROM `routes`";
+        $result = mysqli_query($conn, $selectQuery);
+        if (mysqli_num_rows($result) > 0) {
+        } else {
+            $msg = "No Record found";
+        }
     }
 }
 ?>
@@ -183,8 +206,8 @@ if (mysqli_connect_errno()) {
                             <th scope="col">Bus Name</th>
                             <th scope="col">From</th>
                             <th scope="col">To</th>
-                            <th scope="col">Time</th>
-                            <th scope="col">Date/Time</th>
+                            <!-- <th scope="col">Time</th>
+                            <th scope="col">Date/Time</th> -->
                             <th scope="col">Action</th>
                         </tr>
                     </thead>
@@ -220,8 +243,7 @@ if (mysqli_connect_errno()) {
                                          <td>" . $bus . "</td>
                                          <td>" . $FromLocation . "</td>
                                          <td>" .  $ToLocation  . "</td>
-                                         <td>" . $row["Time"] . "</td>
-                                         <td>" . $row["Date_Time"] . "</td>
+                                    
    
                                          <td>
                                    <a class='bg-primary text-white p-1 px-2  rounded-5' href='bus-update.php'>update</a>

@@ -71,6 +71,11 @@ if (mysqli_connect_errno()) {
             background-color: #5926df8f;
             border: none;
         }
+ 
+        .btn-primary:hover {
+            background-color: #3614928f;
+        }
+        
 
         .ticket-booking-container {
             position: relative;

@@ -177,7 +177,7 @@ mysqli_close($conn);
         }
 
         .btn:hover{
-            background-color: red;
+            background-color:  #7385e6;
         }
     </style>
 </head>

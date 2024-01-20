@@ -33,9 +33,15 @@
 
       <?php
            if(isset($_SESSION['username'])){
-            echo"<a href='login.php' data-mdb-ripple-init type='button' class='btn text-white btn-link px-3 me-2'>
+            echo"<a  href='login.php' data-mdb-ripple-init type='button' class='btn  btn-primary text-white  btn-link px-3 me-2  '>
             Logout
-           </a>";
+           </a>
+
+           <a   href='login.php' data-mdb-ripple-init type='button' class='btn  btn-primary text-white  btn-link px-3 me-2  '>
+            Account
+           </a>
+           
+           ";
             
            }else{
                echo"<a href='login.php' data-mdb-ripple-init type='button' class='btn text-white btn-link px-3 me-2'>

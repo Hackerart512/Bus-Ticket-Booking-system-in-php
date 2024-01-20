@@ -4,7 +4,7 @@
 
 // check session
 session_start();
-if(!isset($_SESSION['username']) || $_SESSION['loggedin'] != true){
+if (!isset($_SESSION['username']) || $_SESSION['loggedin'] != true) {
     header("location:login.php");
 }
 // check session
@@ -141,7 +141,7 @@ if (mysqli_connect_errno()) {
                         </a>
                     </li>
 
-                
+
                     <!-- Avatar -->
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle hidden-arrow d-flex align-items-center" href="#" id="navbarDropdownMenuLink" role="button" data-mdb-toggle="dropdown" aria-expanded="false">
@@ -170,7 +170,7 @@ if (mysqli_connect_errno()) {
     <!--Main layout-->
     <main style="margin-top: 58px;">
         <div class="main-content pt-4 bg-white p-5 rounded-5">
-            <h2 class="text-center my-3">View Bus</h2>
+            <h2 class="text-center my-3">Bus Scheduling</h2>
 
             <div class="view-table my-5 d-flex  justify-content-center flex-column overflow-x" action="add-bus.php" method="post">
                 <table class="table">
@@ -181,7 +181,7 @@ if (mysqli_connect_errno()) {
                             <th scope="col">Bus Type</th>
                             <th scope="col">Bus Capacity</th>
                             <th scope="col">Bus Number</th>
-                            
+
                             <th scope="col">Action</th>
                         </tr>
                     </thead>
@@ -189,29 +189,20 @@ if (mysqli_connect_errno()) {
 
                         <?php while ($row = mysqli_fetch_assoc($result)) {
 
-
                             echo "<tr>
-                                     <td scope='row'> " . $row["Id"] . "</td>
-                                     <td>" . $row["Bus_name"] . "</td>
-                                     <td>" . $row["Bus_type"] . "</td>
-                                     <td>" . $row["Bus_capacity"] . "</td>
+                                      <td scope='row'> " . $row["Id"] . "</td>
+                                      <td>" . $row["Bus_name"] . "</td>
+                                      <td>" . $row["Bus_type"] . "</td>
+                                      <td>" . $row["Bus_capacity"] . "</td>
                                       <td>" . $row["Bus_number"] . "</td>
-                                      
-
                                       <td>
-                                <a class='bg-primary text-white p-1 px-2  rounded-5' href='bus-update.php'>update</a>
-                                <a class='bg-danger text-white p-1 px-2  rounded-5' href='delete-bus.php?Id=" . $row["Id"] . "'>Delete</a>
-                            </td>
+                                      <a class='bg-primary text-white p-1 px-2  rounded-5' href='view-routes.php?Id=" . $row["Id"] . "'>View</a>
+                                      </td>
                                   </tr>";
-                        } ?>
-                       
-
+                            } ?>
                     </tbody>
                 </table>
-
-
             </div>
-
         </div>
     </main>
     <!--Main layout-->
