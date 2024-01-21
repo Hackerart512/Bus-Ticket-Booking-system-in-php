@@ -190,7 +190,7 @@ mysqli_close($conn);
         </p>
         <h2 class="text-white">Welcome to  GriTisome  travel agency</h2>
         <h2 class="text-white">Most welcome</h2>
-        <button type="button" class="btn btn-outline-light">Register Now -></button>
+        <button type="button" class="btn btn-outline-light">Book Now -></button>
     </div>
 
     <!-- ticket boking container  -->

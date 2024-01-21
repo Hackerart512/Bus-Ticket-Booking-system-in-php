@@ -19,7 +19,7 @@
           <a class="nav-link text-white" href="#">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-white" href="#">Bus Booking</a>
+          <a class="nav-link text-white" href="#">My Booking</a>
         </li>
         <li class="nav-item">
           <a class="nav-link text-white" href="#">Contact Us</a>
@@ -52,7 +52,6 @@
              </a>";
            }
       ?>
-
 
       </div>
     </div>

@@ -4,7 +4,7 @@
 
 // check session
 session_start();
-if(!isset($_SESSION['username']) || $_SESSION['loggedin'] != true){
+if (!isset($_SESSION['username']) || $_SESSION['loggedin'] != true) {
     header("location:login.php");
 }
 // check session
@@ -71,11 +71,11 @@ if (mysqli_connect_errno()) {
             background-color: #5926df8f;
             border: none;
         }
- 
+
         .btn-primary:hover {
             background-color: #3614928f;
         }
-        
+
 
         .ticket-booking-container {
             position: relative;
@@ -149,6 +149,49 @@ if (mysqli_connect_errno()) {
             font-size: 6vh;
             text-align: center;
             margin: 30px;
+        }
+
+
+        .view-bus-container {
+            box-shadow: 0 0 10px #e1dfdf;
+            border-radius: 11px;
+            padding: 18px;
+        }
+
+
+        /* //// */
+        .seat-outter-div {
+            width: 168px;
+        }
+
+       input.seat[type="checkbox"] {
+            appearance: none;
+            position: absolute;
+            width: 126px;
+            height: 35px;
+           border: none;
+            padding: 0px;
+            margin-top: 2px;
+        }
+
+
+        input[type="checkbox"]:checked  +.seat-tile {
+            background: gray;
+            border: 2px solid  white;
+        }
+
+        .seat-tile {
+            height: 39px;
+            padding: 12px 12px;
+            border-radius: 10px;
+          
+            font-weight: 600;
+     
+            margin: 12px 0;
+            width: 128px;
+            background: white;
+    border: 2px solid #07bc68;
+
         }
     </style>
 </head>
@@ -235,14 +278,20 @@ if (mysqli_connect_errno()) {
                            <div class='bus-seat'>
                                 <p>22 seat available</p>
                                 <p>6 single</p>
-                                <button class='btn btn-primary'>VIEW SEATS</button>
+                                <button class='btn btn-primary text-white'><a class=' text-white ' href='view-ticket.php?Id=" . $row["Id"] . "'>View Ticket</a></button>
                            </div>
                      </div>
                </div>";
                 }
             }
         } ?>
+    
+
+       
+        
     </section>
+
+    
 
 
     <?php include 'footer.php'; ?>
@@ -261,4 +310,5 @@ if (mysqli_connect_errno()) {
     <!-- bootstrap js -->
 
 </body>
+
 </html>

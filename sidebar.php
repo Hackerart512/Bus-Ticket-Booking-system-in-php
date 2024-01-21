@@ -74,6 +74,20 @@
                         <a href="view-location.php" class="list-group-item list-group-item-action py-2 ripple">View Location</a>
                         
                     </ul>
+
+                    <!-- routes seat -->
+                    <a href="#bus-seat" class="list-group-item list-group-item-action py-2 ripple" data-toggle="collapse" aria-expanded="false">
+                    
+                    <!-- <i class="fas  fa-location-dotfa-fw me-3"></i> -->
+                    <i class= "fa-solid fa-location-dot fa-fw me-3"></i>
+                        Seat
+                        <i class="fas fa-angle-down fa-pull-right"></i>
+                    </a>
+                    <ul class="collapse list-unstyled" id="bus-seat">
+                        <a href="add-seat.php" class="list-group-item list-group-item-action py-2 ripple">Add Seat</a>
+                        <a href="view-seat.php" class="list-group-item list-group-item-action py-2 ripple">View Seat</a>
+                        
+                    </ul>
                     
                     
                     
